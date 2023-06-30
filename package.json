@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/keepBlank/G-Design-of-Vue/issues"
   },
-  "homepage": "https://github.com/keepBlank/G-Design-of-Vue#readme"
+  "homepage": "https://github.com/keepBlank/G-Design-of-Vue#readme",
+  "dependencies": {
+    "vue": "^2.5.17"
+  }
 }
