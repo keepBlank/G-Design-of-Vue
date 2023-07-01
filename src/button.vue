@@ -1,8 +1,6 @@
 <template>
     <button class='g-button' :class="{[`icon-${iconPosition}`]: true}">
-        <svg class="icon" v-if="icon">
-            <use :xlink:href=`#i-${icon}`></use>
-        </svg>
+        <g-icon class="icon" v-if="icon" :name="icon"></g-icon>
         <span class="content">
             <slot></slot>
         </span>
@@ -17,7 +15,7 @@ export default {
             type: String,
             default: 'left',
             validator(value) {
-                return value !== 'left' && value !== 'right' ? false : true;
+                return !(value !== 'left' && value !== 'right');
             }
         }
     }
