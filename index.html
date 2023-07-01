@@ -31,12 +31,30 @@
         }
     </style>
 
+    <style>
+        .icon {
+            width: 1.5em;
+            height: 1.5em;
+        }
+    </style>
+
 </head>
 <body>
 <div id="app">
-    <g-button></g-button>
+    <g-button icon="setting">
+        按钮
+    </g-button>
+
+    <g-button>
+        按钮
+    </g-button>
+
+    <g-button icon="setting" icon-position="right">
+        按钮
+    </g-button>
 </div>
 <script src="./src/app.js"></script>
-
+<!--引入iconfont symbol js文件-->
+<script src="//at.alicdn.com/t/c/font_4146498_50t4e1zkx2g.js"></script>
 </body>
 </html>
