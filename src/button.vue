@@ -40,17 +40,13 @@ export default {
 
   &:hover {border-color: var(--border-color-hover);}
   &:active {background-color: var(--border-active-bg);}
-  &:focus {
-    outline: none;
-  }
+  &:focus {outline: none;}
   > .icon{order: 1;margin-right: .1em}
   > .content{order: 2;}
   &.icon-right {
       > .icon{order: 2;margin-right:0;margin-left: .1em}
       > .content{order: 1;}
   }
-  .loading{
-    animation: spin 1.5s linear infinite;
-  }
+  .loading{animation: spin 1.5s linear infinite;}
 }
 </style>
