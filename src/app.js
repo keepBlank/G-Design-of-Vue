@@ -58,59 +58,67 @@ chai.use(spies)
     button.$el.remove();
     button.$destroy();
 }
-
+try {
 // 单元测试svg的样式order
-{
-    const div = document.createElement('div');
-    document.body.appendChild(div);
-    const Constructor = Vue.extend(Button);
-    const vm = new Constructor({
-        propsData: {
-            icon: 'setting'
-        }
-    });
-    // mount到内存中
-    vm.$mount(div);
-    let svg = vm.$el.querySelector('svg');
-    let order = window.getComputedStyle(svg).order;
-    expect(order).to.eq('1');
-    vm.$el.remove();
-    vm.$destroy();
-}
+    {
+        const div = document.createElement('div');
+        document.body.appendChild(div);
+        const Constructor = Vue.extend(Button);
+        const vm = new Constructor({
+            propsData: {
+                icon: 'setting'
+            }
+        });
+        // mount到内存中
+        vm.$mount(div);
+        let svg = vm.$el.querySelector('svg');
+        let order = window.getComputedStyle(svg).order;
+        expect(order).to.eq('1');
+        vm.$el.remove();
+        vm.$destroy();
+    }
 
 // 单元测试按钮的iconPosition
-{
-    const div = document.createElement('div');
-    document.body.appendChild(div);
-    const Constructor = Vue.extend(Button);
-    const vm = new Constructor({
-        propsData: {
-            icon: 'setting',
-            iconPosition: 'right'
-        }
-    });
-    // mount到内存中
-    vm.$mount(div);
-    let svg = vm.$el.querySelector('svg');
-    let order = window.getComputedStyle(svg).order;
-    expect(order).to.eq('2');
-    vm.$el.remove();
-    vm.$destroy();
-}
+    {
+        const div = document.createElement('div');
+        document.body.appendChild(div);
+        const Constructor = Vue.extend(Button);
+        const vm = new Constructor({
+            propsData: {
+                icon: 'setting',
+                iconPosition: 'right'
+            }
+        });
+        // mount到内存中
+        vm.$mount(div);
+        let svg = vm.$el.querySelector('svg');
+        let order = window.getComputedStyle(svg).order;
+        expect(order).to.eq('2');
+        vm.$el.remove();
+        vm.$destroy();
+    }
 
 // 单元测试 监听按钮的click事件
-{
-    const Constructor = Vue.extend(Button);
-    const vm = new Constructor({
-        propsData: {
-            icon: 'setting',
-            iconPosition: 'right'
-        }
-    });
-    vm.$mount();
-    let spy = chai.spy(function (){})
-    vm.$on('click', spy);
-    let button = vm.$el;
-    button.click();
-    expect(spy).to.have.been.called()
+    {
+        const Constructor = Vue.extend(Button);
+        const vm = new Constructor({
+            propsData: {
+                icon: 'setting',
+                iconPosition: 'right'
+            }
+        });
+        vm.$mount();
+        let spy = chai.spy(function () {
+        })
+        vm.$on('click', spy);
+        let button = vm.$el;
+        button.click();
+        expect(spy).to.have.been.called()
+    }
+}catch (error){
+    window.errors = [error]
+}finally {
+    window.errors&&window.errors.forEach((error)=>{
+        console.error(error.message);
+    })
 }
