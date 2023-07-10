@@ -5,16 +5,39 @@
     <meta charset="UTF-8">
     <title>G-Design-of-Vue</title>
     <style>
-        * {margin: 0;padding: 0;box-sizing: border-box;}
-        :root {--button-height: 32px;--font-size: 14px;--button-bg: white;--button-active-bg: #eee;--border-radius: 4px;
-            --color: #333;--border-color: #999;--border-color-hover: #666;--border-active-bg: #d3d2d2;--border-color-hover: red;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        #app {margin: 20px;}
-        body {font-size: var(--font-size);}
+
+        :root {
+            --button-height: 32px;
+            --font-size: 14px;
+            --button-bg: white;
+            --button-active-bg: #eee;
+            --border-radius: 4px;
+            --color: #333;
+            --border-color: #999;
+            --border-color-hover: #666;
+            --border-active-bg: #d3d2d2;
+            --border-color-hover: red;
+        }
+
+        #app {
+            margin: 20px;
+        }
+
+        body {
+            font-size: var(--font-size);
+        }
     </style>
 
     <style>
-        .icon {width: 1.5em;height: 1.5em;}
+        .icon {
+            width: 1.5em;
+            height: 1.5em;
+        }
     </style>
 
 </head>
@@ -30,8 +53,10 @@
         按钮
     </g-button>
     <g-button-group>
-        <g-button icon="left">上一页</g-button>
-        <g-button >更多</g-button>
+        <div>
+            <g-button icon="left">上一页</g-button>
+        </div>
+        <g-button>更多</g-button>
         <g-button icon="right" icon-position="right">下一页</g-button>
     </g-button-group>
 </div>
