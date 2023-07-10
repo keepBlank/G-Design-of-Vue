@@ -20,6 +20,10 @@ new Vue({
     }
 });
 
+import chai from 'chai'
+import spies from 'chai-spies'
+
+chai.use(spies)
 // 单元测试icon
 {
     const Constructor = Vue.extend(Button);
@@ -94,3 +98,19 @@ new Vue({
     vm.$destroy();
 }
 
+// 单元测试 监听button组件的click事件
+{
+    const Constructor = Vue.extend(Button);
+    const vm = new Constructor({
+        propsData: {
+            icon: 'setting',
+            iconPosition: 'right'
+        }
+    });
+    vm.$mount();
+    let spy = chai.spy(function (){})
+    vm.$on('click', spy);
+    let button = vm.$el;
+    button.click();
+    expect(spy).to.have.been.called()
+}
