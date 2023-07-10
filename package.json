@@ -4,7 +4,8 @@
   "description": "一个用vue实现的UI组件库",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-test": "parcel watch test/* --no-cache & karma start",
+    "test": "parcel build test/* --no-cache --no-minify && karma start --single-run",
     "dev": "parcel index.html"
   },
   "repository": {
@@ -29,8 +30,17 @@
     "@vue/component-compiler-utils": "^3.3.0",
     "chai": "^4.3.7",
     "chai-spies": "^1.0.0",
+    "karma": "^6.4.2",
+    "karma-chai": "^0.1.0",
+    "karma-chai-spies": "^0.1.4",
+    "karma-chrome-launcher": "^3.2.0",
+    "karma-mocha": "^2.0.1",
+    "karma-sinon-chai": "^2.0.2",
+    "mocha": "^10.2.0",
     "parcel-bundler": "^1.12.5",
     "sass": "^1.63.6",
+    "sinon": "^15.2.0",
+    "sinon-chai": "^3.7.0",
     "vue-template-compiler": "^2.5.17"
   },
   "alias": {
