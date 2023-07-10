@@ -24,7 +24,7 @@ import chai from 'chai'
 import spies from 'chai-spies'
 
 chai.use(spies)
-// 单元测试icon
+// 单元测试按钮有icon
 {
     const Constructor = Vue.extend(Button);
     const vm = new Constructor({
@@ -41,7 +41,7 @@ chai.use(spies)
     vm.$destroy();
 }
 
-// 单元测试loading
+// 单元测试按钮有loading状态
 {
     const Constructor = Vue.extend(Button);
     const button = new Constructor({
@@ -78,7 +78,7 @@ chai.use(spies)
     vm.$destroy();
 }
 
-// 单元测试iconPosition
+// 单元测试按钮的iconPosition
 {
     const div = document.createElement('div');
     document.body.appendChild(div);
@@ -98,7 +98,7 @@ chai.use(spies)
     vm.$destroy();
 }
 
-// 单元测试 监听button组件的click事件
+// 单元测试 监听按钮的click事件
 {
     const Constructor = Vue.extend(Button);
     const vm = new Constructor({
