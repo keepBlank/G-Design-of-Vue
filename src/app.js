@@ -1,12 +1,12 @@
 import Vue from 'vue';
 import Button from './button.vue';
-import Icon from './icon.vue';
+import GIcon from './icon.vue';
 import GButtonGroup from './g-button-group.vue';
 import {expect} from 'chai';
 
 // 全局注册组件
 Vue.component('g-button', Button);
-Vue.component('g-icon', Icon);
+Vue.component('g-icon', GIcon);
 Vue.component('g-button-group', GButtonGroup);
 
 new Vue({
