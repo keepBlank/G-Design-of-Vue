@@ -9,11 +9,10 @@
 </template>
 
 <script>
-import vue from 'vue'
-import Icon from './icon.vue'
+import GIcon from './g-icon.vue'
 export default {
     components:{
-      'g-icon':Icon
+      'g-icon':GIcon
     },
     props: {
         icon: {},

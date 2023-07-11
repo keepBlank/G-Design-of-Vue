@@ -1,5 +1,5 @@
-import Button from './src/button.vue'
+import GButton from './src/g-button.vue'
 import GButtonGroup from './src/g-button-group.vue';
-import GIcon from './src/icon.vue'
+import GIcon from './src/g-icon.vue'
 
-export {Button,GButtonGroup,GIcon}
+export {GButton,GButtonGroup,GIcon}

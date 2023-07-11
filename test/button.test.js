@@ -2,7 +2,7 @@ import sinon from 'sinon';
 
 const expect = chai.expect;
 import Vue from 'vue';
-import Button from '../src/button';
+import Button from '../src/g-button.vue';
 
 Vue.config.productionTip = false;
 Vue.config.devtools = false;

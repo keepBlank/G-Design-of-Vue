@@ -1,6 +1,6 @@
 {
   "name": "g-design-of-vue",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "一个用vue实现的UI组件库",
   "main": "dist/index.js",
   "scripts": {
