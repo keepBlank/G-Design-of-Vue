@@ -4,9 +4,8 @@
   "description": "一个用vue实现的UI组件库",
   "main": "index.js",
   "scripts": {
-    "dev-test": "parcel watch test/* --no-cache & karma start",
-    "test": "parcel build test/* --no-cache --no-minify && karma start --single-run",
-    "dev": "parcel index.html"
+    "dev-test": "parcel watch test/* --no-cache && karma start",
+    "test": "parcel build test/* --no-cache --no-minify && karma start --single-run"
   },
   "repository": {
     "type": "git",
@@ -37,7 +36,8 @@
     "karma-mocha": "^2.0.1",
     "karma-sinon-chai": "^2.0.2",
     "mocha": "^10.2.0",
-    "parcel-bundler": "^1.12.5",
+    "node-sass": "^9.0.0",
+    "parcel-bundler": "^1.9.2",
     "sass": "^1.63.6",
     "sinon": "^15.2.0",
     "sinon-chai": "^3.7.0",
