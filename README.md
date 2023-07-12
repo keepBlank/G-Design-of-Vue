@@ -1,11 +1,10 @@
+<p align="center">
+  <a href="https://ant.design">
+    <img width="200" src="https://s2.loli.net/2023/07/12/jWHvIoZKeQRlVyC.png" width="80px">
+  </a>
+</p>
 
-<div align=center marin="20px 0 0 0">
-<img src="https://s2.loli.net/2023/07/12/jWHvIoZKeQRlVyC.png" width="80px" />
-</div>
-
-<div align=center>
-<font color=#1b1f24 face="黑体" size="8">G-Design-of-Vue</font>
-</div>
+<h1 align="center">G-Design-of-Vue</h1>
 
 <div align="center">
 
