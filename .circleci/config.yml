@@ -8,4 +8,5 @@ jobs:
       - run:
           name: Test vue-ui with mocha and chai
           command: |
+            npm i karma
             karma start
