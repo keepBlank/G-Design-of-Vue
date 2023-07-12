@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://ant.design">
-    <img width="200" src="https://s2.loli.net/2023/07/12/jWHvIoZKeQRlVyC.png" width="80px">
+    <img src="https://s2.loli.net/2023/07/12/jWHvIoZKeQRlVyC.png" width="80px">
   </a>
 </p>
 
