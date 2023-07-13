@@ -2,6 +2,7 @@
 <script>
 
 export default ({
+    name:'g-icon',
     props:['name']
 })
 </script>
@@ -13,7 +14,7 @@ export default ({
     </svg>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped >
 .g-icon {
   width: 1.5em;
   height: 1.5em;

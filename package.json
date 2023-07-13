@@ -2,8 +2,9 @@
   "name": "g-design-of-vue",
   "version": "0.0.5",
   "description": "一个用vue实现的UI组件库",
-  "main": "dist/index.js",
+  "main": "index.html",
   "scripts": {
+    "start": "npx parcel index.html --no-cache",
     "dev-test": "parcel watch test/* --no-cache && karma start",
     "test": "parcel build test/* --no-cache --no-minify && karma start --single-run"
   },
