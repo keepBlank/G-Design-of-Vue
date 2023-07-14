@@ -59,45 +59,17 @@ describe('Input', () => {
     describe('events', () => {
         const Constructor = Vue.extend(Input);
         let vm;
-        it('支持 change 事件', () => {
-            vm = new Constructor({}).$mount();
-            const callback = sinon.fake();
-            vm.$on('change', callback);
-            // 触发input的change事件
-            let event = new Event('change')
-            const inputElement = vm.$el.querySelector('input');
-            inputElement.dispatchEvent(event)
-            expect(callback).to.have.been.calledWith(event);
-        });
-        it('支持 input 事件', () => {
-            vm = new Constructor({}).$mount();
-            const callback = sinon.fake();
-            vm.$on('input', callback);
-            // 触发input的change事件
-            let event = new Event('input')
-            const inputElement = vm.$el.querySelector('input');
-            inputElement.dispatchEvent(event)
-            expect(callback).to.have.been.calledWith(event);
-        });
-        it('支持 focus 事件', () => {
-            vm = new Constructor({}).$mount();
-            const callback = sinon.fake();
-            vm.$on('focus', callback);
-            // 触发input的change事件
-            let event = new Event('focus')
-            const inputElement = vm.$el.querySelector('input');
-            inputElement.dispatchEvent(event)
-            expect(callback).to.have.been.calledWith(event);
-        });
-        it('支持 blur 事件', () => {
-            vm = new Constructor({}).$mount();
-            const callback = sinon.fake();
-            vm.$on('blur', callback);
-            // 触发input的change事件
-            let event = new Event('blur')
-            const inputElement = vm.$el.querySelector('input');
-            inputElement.dispatchEvent(event)
-            expect(callback).to.have.been.calledWith(event);
+        it('支持 change/input/focus/blur 事件', () => {
+            ['change','input','focus','blur'].forEach((eventName)=>{
+                vm = new Constructor({}).$mount();
+                const callback = sinon.fake();
+                vm.$on(eventName, callback);
+                // 触发input的change事件
+                let event = new Event(eventName)
+                const inputElement = vm.$el.querySelector('input');
+                inputElement.dispatchEvent(event)
+                expect(callback).to.have.been.calledWith(event);
+            })
         });
     });
 });
