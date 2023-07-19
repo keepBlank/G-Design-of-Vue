@@ -45,7 +45,7 @@ export default {
 <style scoped lang="scss">
 .col {
   width: 50%;
-  height: 100px;
+  min-height: 80px;
   $class-prefix: col-;
   //.col.col-1
   //.col.col-2
