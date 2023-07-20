@@ -6,6 +6,11 @@ import GInput from './g-input.vue';
 import './svg'
 import GRow from './g-row.vue';
 import GCol from './g-col.vue';
+import GHeader from './g-header.vue';
+import GLayout from './g-layout.vue';
+import GSider from './g-sider.vue';
+import GContent from './g-content.vue';
+import GFooter from './g-footer.vue';
 
 // 全局注册组件
 Vue.component('g-button', GButton);
@@ -14,6 +19,11 @@ Vue.component('g-button-group', GButtonGroup);
 Vue.component('g-input',GInput)
 Vue.component('g-row',GRow)
 Vue.component('g-col',GCol)
+Vue.component('g-header',GHeader)
+Vue.component('g-layout',GLayout)
+Vue.component('g-sider',GSider)
+Vue.component('g-content',GContent)
+Vue.component('g-footer',GFooter)
 
 new Vue({
     el: '#app',
