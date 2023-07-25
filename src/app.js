@@ -11,6 +11,8 @@ import GLayout from './g-layout.vue';
 import GSider from './g-sider.vue';
 import GContent from './g-content.vue';
 import GFooter from './g-footer.vue';
+import GToast from './g-toast.vue';
+import plugin from './plugin';
 
 // 全局注册组件
 Vue.component('g-button', GButton);
@@ -24,6 +26,8 @@ Vue.component('g-layout',GLayout)
 Vue.component('g-sider',GSider)
 Vue.component('g-content',GContent)
 Vue.component('g-footer',GFooter)
+Vue.component('g-toast',GToast)
+Vue.use(plugin)
 
 new Vue({
     el: '#app',
@@ -35,10 +39,12 @@ new Vue({
             message:'test v-model'
         };
     },
+    created() {
+    },
     methods:{
-        inputChange(e){
-            console.log(e.target.value);
-        }
+       showToast(){
+           this.$toast('我是 toast')
+       }
     }
 });
 
