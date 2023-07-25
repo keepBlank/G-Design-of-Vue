@@ -2,10 +2,13 @@ import GToast from './g-toast.vue';
 
 export default {
     install(Vue,options){
-        Vue.prototype.$toast = function (message){
+        // 实现toast方法
+        Vue.prototype.$toast =  (message,toastOptions)=>{
             const Constructor = Vue.extend(GToast)
-            let toast = new Constructor()
-            toast.$slots.default = message
+            let toast = new Constructor({
+                propsData: toastOptions
+            })
+            toast.$slots.default = [message];
             toast.$mount()
             document.body.appendChild(toast.$el)
         }
